@@ -1,0 +1,7 @@
+#SAP Login Data
+#Tue Jan 25 01:56:05 CET 2011
+jco.client.client=501
+jco.client.passwd=b34a5p1i
+jco.client.sysnr=14
+jco.client.user=devk-100
+jco.client.ashost=/H/saprouter2.hcc.uni-magdeburg.de/S/3299/H/M14Z
