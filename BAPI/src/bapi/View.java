@@ -431,10 +431,7 @@ class ViewLabelProvider extends LabelProvider implements ITableLabelProvider {
 		 ImageData imgd = new ImageData("/bapi.png");
 		 Image img = new Image(null, imgd);
 		 System.out.println(img.getBounds().width);
-		 final int width = img.getBounds().width;
-		 final int height = img.getBounds().height;
-		 img.getImageData().scaledTo((int)(width*2),(int) (height* 0.5));
-		 System.out.println(img.getBounds().width);
+
 		 return img;		 
 //		return PlatformUI.getWorkbench().getSharedImages()
 //				.getImage(ISharedImages.IMG_TOOL_UP);
