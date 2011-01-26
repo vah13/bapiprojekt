@@ -2,6 +2,8 @@ package bapi;
 
 import java.util.ArrayList;
 
+import org.eclipse.jface.viewers.DoubleClickEvent;
+import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.jface.viewers.LabelProvider;
@@ -343,7 +345,14 @@ public class View extends ViewPart {
 		rd.horizontalSpan = 4;
 		c.setLayoutData(rd);
 
-		viewer = new TableViewer(c, SWT.H_SCROLL | SWT.V_SCROLL);
+		viewer = new TableViewer(c, SWT.H_SCROLL | SWT.V_SCROLL | SWT.MULTI);
+		viewer.addDoubleClickListener(new IDoubleClickListener() {
+			
+			@Override
+			public void doubleClick(DoubleClickEvent event) {
+				// TODO Auto-generated method stub
+			}
+		});
 		tvc = new TableViewerColumn(viewer, SWT.BORDER);
 		 TableViewerColumn tvc2 = new TableViewerColumn(viewer, SWT.BORDER);
 		tvc.getColumn().setText("BAPI");
