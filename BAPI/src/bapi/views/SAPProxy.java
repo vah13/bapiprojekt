@@ -7,6 +7,7 @@ import com.sap.conn.jco.*;
 //Kapselt den Zugriff auf das SAP System.
 public class SAPProxy 
 {	
+	String[] bapis;
 	SAPSession logon = new SAPSession("501",
 			"devk-100",
 			"b34a5p1i",
@@ -17,7 +18,7 @@ public class SAPProxy
 			"10");
 	
 	//Gibt eine Liste aller im System vorhandenen BAPI´s zurück
-	public String[] getBAPIList()
+	public void createBAPIList()
 	{
 		ArrayList table = new ArrayList();//complete table
 //		ArrayList record = new ArrayList();//one record
@@ -31,6 +32,10 @@ public class SAPProxy
 			if(obj != null)
 				bapis[i] = obj;
 		}
+		this.bapis = bapis;
+	}
+
+	public String[] getBapiTable(){
 		return bapis;
 	}
 	

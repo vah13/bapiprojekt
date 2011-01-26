@@ -10,9 +10,10 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SAPProxy proxy = new SAPProxy();
-			String[] bapis = proxy.getBAPIList();
-			for (int i = 0; i < bapis.length; ++i)
-				System.out.println(bapis[i]);
+		proxy.createBAPIList();
+		String[] bapis = proxy.getBapiTable();
+		for (int i = 0; i < bapis.length; ++i)
+			System.out.println(bapis[i]);
 
 		// Object[][] params =
 		// proxy.GetParameterlistByBAPIName("BAPI_FLBOOKING_GETLIST");
